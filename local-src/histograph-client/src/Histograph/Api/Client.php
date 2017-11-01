@@ -15,7 +15,7 @@ class Client extends GuzzleClient
     const API_TIMEOUT = 10;
     const API_CONNECT_TIMEOUT = 10;
 
-    protected $baseUri = 'https://api.histograph.io';
+    protected $baseUri = 'http://localhost:3000';
     //protected $baseUri = 'http://histograph-lb-2072119452.eu-central-1.elb.amazonaws.com';
 
     /**
