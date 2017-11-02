@@ -99,9 +99,9 @@ $app['user.options'] = array(
     'mailer' => array(
         'enabled' => true, // When false, email notifications are not sent (they're silently discarded).
         'fromEmail' => array(
-            //'address' => 'do-not-reply@' . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : gethostname()),
-            'address' => 'histograph.io@gmail.com',
-            'name' => 'LocatieNaarUri website',
+            'address' => 'do-not-reply@' . (isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : gethostname()),
+            //'address' => 'histograph.io@gmail.com',
+            'name' => 'Standaardiseren.erfgeo.nl',
         ),
     ),
 

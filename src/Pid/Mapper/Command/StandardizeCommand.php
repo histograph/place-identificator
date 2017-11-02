@@ -163,7 +163,7 @@ class StandardizeCommand extends Command
 
             $message = \Swift_Message::newInstance()
                 ->setSubject($app['sitename'] . ' CSV-bestand verwerkt')
-                ->setFrom(array('histograph.io@gmail.com'))
+                ->setFrom($app['user.options']['mailer']['fromEmail'])
                 ->setTo(array($user['email']))
                 ->setBody("Beste {$user['name']},
 
