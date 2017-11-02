@@ -158,18 +158,20 @@ class StandardizeCommand extends Command
             // get user via dataset user_id
             $user = $dataService->getUser($dataset['user_id']);
             $app['monolog']->addInfo('Sending an email to user, with id: ' . $dataset['user_id']);
+            $app['monolog']->addInfo('setSubject ' . $app['sitename'] . ' CSV-bestand verwerkt ' . 'setFrom ' . $app['user.options']['mailer']['fromEmail']['address'] . ' mail ' . $user['email']);
+
 
             $dataService->setMappingFinished($dataset['id']);
 
             $message = \Swift_Message::newInstance()
                 ->setSubject($app['sitename'] . ' CSV-bestand verwerkt')
-                ->setFrom($app['user.options']['mailer']['fromEmail'])
+                ->setFrom($app['user.options']['mailer']['fromEmail']['address'])
                 ->setTo(array($user['email']))
                 ->setBody("Beste {$user['name']},
 
 Uw plaatsnamenbestand '{$dataset['name']}' is verwerkt. Kijk op onderstaande link om de resultaten in te zien of te downloaden.
 
-http://standaardiseren.erfgeo.nl/datasets/{$dataset['id']}
+http://standaardiseren." . gethostname() . "/datasets/{$dataset['id']}
 
                 ");
 
