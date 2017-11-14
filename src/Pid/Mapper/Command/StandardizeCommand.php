@@ -171,7 +171,7 @@ class StandardizeCommand extends Command
 
 Uw plaatsnamenbestand '{$dataset['name']}' is verwerkt. Kijk op onderstaande link om de resultaten in te zien of te downloaden.
 
-http://standaardiseren." . gethostname() . "/datasets/{$dataset['id']}
+http://standaardiseren.erfgeo.nl/datasets/{$dataset['id']}
 
                 ");
 
