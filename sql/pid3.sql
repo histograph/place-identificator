@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `records` (
   `dataset_id` int(11) DEFAULT NULL,
   `row_id` int(11) DEFAULT NULL,
   `original_name` varchar(255) NOT NULL DEFAULT '' COMMENT 'Location name to search on',
-  `liesin_name` varchar(255) NOT NULL COMMENT 'Location name to use as liesIn',
+  `liesin_name` varchar(255) DEFAULT NULL COMMENT 'Location name to use as liesIn',
   `hg_id` varchar(255) DEFAULT NULL,
   `hg_uri` varchar(255) DEFAULT NULL,
   `hg_name` varchar(255) DEFAULT NULL COMMENT 'Name according to APi source',
