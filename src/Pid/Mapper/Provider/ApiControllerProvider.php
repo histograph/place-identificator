@@ -122,7 +122,7 @@ class ApiControllerProvider implements ControllerProviderInterface
             } else {
                 $data = $uriData;
 
-                $data['hg_geometry'] = json_encode($data['geometry']);
+                $data['hg_geometry'] = json_encode($data['hg_geometry']);
                 $data['hg_dataset'] = Sources::discoverSourceType($uri);
 
                 if ($ids = $app['dataset_service']->storeManualMapping($data, $id)) {

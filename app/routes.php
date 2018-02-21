@@ -14,7 +14,7 @@ $app->get('/colofon', function () use ($app) {
 });
 
 $app['histograph_api'] = $app['histograph_search_client']->getBaseUri();
-$app['thesaurus_uri'] = 'http://thesaurus.erfgeo.nl';
+$app['thesaurus_uri'] = 'https://erfgeo.nl/thesaurus';
 
 // a complete set of routes
 $app->mount('/datasets', new \Pid\Mapper\Provider\DataSetControllerProvider());
